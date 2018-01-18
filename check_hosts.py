@@ -19,7 +19,7 @@ class Pinger(object):
     buttom = "],    \"text\": \"The sensors message\"  } }" # final de la cadena JSON para el sensor de PRTG
 
     # How many ping process at the time.
-    thread_count = 4
+    thread_count = 30
 
     # Lock object to keep track the threads in loops, where it can potentially be race conditions.
     lock = threading.Lock()
@@ -105,7 +105,7 @@ if __name__ == '__main__':
     # si noy hay parametros no hacemos nada
     if args.descripcion and args.ip:
         ping = Pinger()
-        ping.thread_count = 8
+        ping.thread_count = 30
         ping.hosts = args.ip.split(",")
         ping.descr = args.descripcion.split(",")
 
