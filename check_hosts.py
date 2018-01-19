@@ -77,7 +77,10 @@ class Pinger(object):
             result+= '"limitminerror": "1",'
             result+= '"limiterrormsg": "Host error",'        
             result+= '"float": "1",'
-            result+= '"value": 1' if self.ping(ip) else '"value": 0'
+            if self.ping(ip):
+                result+= '"value": 1'
+            else:
+                result+= '"value": 0'
             result+= "}," # el canal del sensor tendra dos posibles valores. 1 para una respuesta satisfactoria y 0 para un error
             
             self.status= self.status + result
