@@ -16,7 +16,7 @@ class Pinger(object):
     status = "" # contenido de los canales que tendra el sensor PRTG
     hosts = [] # listado de hosts e ips
     descr = [] # listado de descripciones de los hosts
-    buttom = "],    \"text\": \"The sensors message\"  } }" # final de la cadena JSON para el sensor de PRTG
+    buttom = "],    \"text\": \"Monitor de Hosts\"  } }" # final de la cadena JSON para el sensor de PRTG
 
     # How many ping process at the time.
     thread_count = 30
