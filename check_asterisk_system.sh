@@ -134,10 +134,13 @@ if [ "$peerssip" ]; then
                 <channel>$p</channel>
                 <unit>TimeResponse</unit>
                 <mode>Absolute</mode>
-                <showChart>1</showChart>
-                <showTable>1</showTable>
-                <warning>0</warning>
                 <float>1</float>
+                <limitmode>1</limitmode>
+                <limitmaxwarning>1000</limitmaxwarning>
+                <limitmaxerror>1999</limitmaxerror>
+                <limitminwarning>1</limitminwarning>
+                <limitminerror>1</limitminerror>
+                <limiterrormsg>Error troncal SIP</limiterrormsg>at>
                 <value>$test_lt</value>
                 </result>
                 "
@@ -165,10 +168,13 @@ if [ "$peersiax" ]; then
                 <channel>$p</channel>
                 <unit>TimeResponse</unit>
                 <mode>Absolute</mode>
-                <showChart>1</showChart>
-                <showTable>1</showTable>
-                <warning>0</warning>
                 <float>1</float>
+                <limitmode>1</limitmode>
+                <limitmaxwarning>1000</limitmaxwarning>
+                <limitmaxerror>1999</limitmaxerror>
+                <limitminwarning>1</limitminwarning>
+                <limitminerror>1</limitminerror>
+                <limiterrormsg>Error troncal IAX</limiterrormsg>             
                 <value>$test_lt</value>
                 </result>
                 "
@@ -196,12 +202,12 @@ if [ "$registrationssip" ]; then
                 xml_troncales=" $xml_troncales 
                 <result>
                 <channel>$p</channel>
-                <unit>TimeResponse</unit>
                 <mode>Absolute</mode>
-                <showChart>1</showChart>
-                <showTable>1</showTable>
-                <warning>0</warning>
                 <float>1</float>
+                <limitmode>1</limitmode>
+                <limitminwarning>1</limitminwarning>
+                <limitminerror>1</limitminerror>
+                <limiterrormsg>Registro Troncal SIP</limiterrormsg>             
                 <value>$test_reg</value>
                 </result>
                 "
@@ -230,12 +236,12 @@ if [ "$registrationsiax" ]; then
                 xml_troncales=" $xml_troncales 
                 <result>
                 <channel>$p</channel>
-                <unit>TimeResponse</unit>
                 <mode>Absolute</mode>
-                <showChart>1</showChart>
-                <showTable>1</showTable>
-                <warning>0</warning>
                 <float>1</float>
+                <limitmode>1</limitmode>
+                <limitminwarning>1</limitminwarning>
+                <limitminerror>1</limitminerror>
+                <limiterrormsg>Registro Troncal SIP</limiterrormsg>  
                 <value>$test_reg</value>
                 </result>
                 "
@@ -304,55 +310,60 @@ echo '
    </result>
    '$xml_troncales'
    <result>
-       <channel>Disco Raiz /</channel>
-       <unit>Percent</unit>
-       <mode>Absolute</mode>
-       <showChart>1</showChart>
-       <showTable>1</showTable>
-       <warning>0</warning>
-       <float>1</float>
+        <channel>Disco Raiz /</channel>
+        <unit>Percent</unit>
+        <mode>Absolute</mode>
+        <float>1</float>
+        <limitmode>1</limitmode>
+        <limitmaxwarning>75</limitmaxwarning>
+        <limitmaxerror>85</limitmaxerror>
+        <limiterrormsg>Disco Raiz</limiterrormsg> 
        <value>'$raiz'</value>
    </result>
    <result>
-       <channel>Disco VAR /var</channel>
-       <unit>Percent</unit>
-       <mode>Absolute</mode>
-       <showChart>1</showChart>
-       <showTable>1</showTable>
-       <warning>0</warning>
-       <float>1</float>
-       <value>'$var'</value>
+        <channel>Disco VAR /var</channel>
+        <unit>Percent</unit>
+        <mode>Absolute</mode>
+        <float>1</float>
+        <limitmode>1</limitmode>
+        <limitmaxwarning>75</limitmaxwarning>
+        <limitmaxerror>85</limitmaxerror>
+        <limiterrormsg>Disco var</limiterrormsg>
+        <value>'$var'</value>
    </result>
    <result>
-       <channel>Memoria RAM</channel>
-       <unit>Percent</unit>
-       <mode>Absolute</mode>
-       <showChart>1</showChart>
-       <showTable>1</showTable>
-       <warning>0</warning>
-       <float>1</float>
-       <value>'$ram'</value>
+        <channel>Memoria RAM</channel>
+        <unit>Percent</unit>
+        <mode>Absolute</mode>
+        <float>1</float>
+        <limitmode>1</limitmode>
+        <limitmaxwarning>80</limitmaxwarning>
+        <limitmaxerror>90</limitmaxerror>
+        <limiterrormsg>RAM</limiterrormsg>
+        <value>'$ram'</value>
    </result>
    <result>
-       <channel>Memoria SWAP</channel>
-       <unit>Percent</unit>
-       <mode>Absolute</mode>
-       <showChart>1</showChart>
-       <showTable>1</showTable>
-       <warning>0</warning>
-       <float>1</float>
-       <value>'$swap'</value>
+        <channel>Memoria SWAP</channel>
+        <unit>Percent</unit>
+        <mode>Absolute</mode>
+        <float>1</float>
+        <limitmode>1</limitmode>
+        <limitmaxwarning>20</limitmaxwarning>
+        <limitmaxerror>30</limitmaxerror>
+        <limiterrormsg>Swap</limiterrormsg>
+        <value>'$swap'</value>
    </result>
 
    <result>
-       <channel>CPU Media</channel>
-       <unit>Percent</unit>
-       <mode>Absolute</mode>
-       <showChart>1</showChart>
-       <showTable>1</showTable>
-       <warning>0</warning>
-       <float>1</float>
-       <value>'$cpu'</value>
+        <channel>CPU Media</channel>
+        <unit>Percent</unit>
+        <mode>Absolute</mode>
+        <float>1</float>
+        <limitmode>1</limitmode>
+        <limitmaxwarning>50</limitmaxwarning>
+        <limitmaxerror>80</limitmaxerror>
+        <limiterrormsg>Disco Raiz</limiterrormsg>
+        <value>'$cpu'</value>
    </result>
 
 
