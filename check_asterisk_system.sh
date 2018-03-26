@@ -250,8 +250,8 @@ fi
 llamadas=`sudo $ASTERISK -rx "core show calls" | grep active\ call | cut -d" " -f1`
 
 # Discos 
-raiz=`df -h / | awk '{print $4 " " $6}' | sort -n |grep % |cut -d "%" -f 1` 
-var=`df -h /var | awk '{print $4 " " $6}' | sort -n |grep % |cut -d "%" -f 1`
+raiz=`df -h / | awk '{print $5 " " $6}' | tail -n 1 |grep % |cut -d "%" -f 1` 
+var=`df -h /var | awk '{print $5 " " $6}' | tail -n 1 |grep % |cut -d "%" -f 1`
 
 # Consumo de RED
 eth0_R1=`cat /sys/class/net/eth0/statistics/rx_bytes`
