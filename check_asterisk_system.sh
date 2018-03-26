@@ -135,12 +135,12 @@ if [ "$peerssip" ]; then
                 <unit>TimeResponse</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
-                <limitmode>1</limitmode>
-                <limitmaxwarning>1000</limitmaxwarning>
-                <limitmaxerror>1999</limitmaxerror>
-                <limitminwarning>1</limitminwarning>
-                <limitminerror>1</limitminerror>
-                <limiterrormsg>Error troncal SIP</limiterrormsg>at>
+                <limitMode>1</limitMode>
+                <limitMaxWarning>1000</limitMaxWarning>
+                <limitMaxError>1999</limitMaxError>
+                <limitMinWarning>1</limitMinWarning>
+                <limitMinError>1</limitMinError>
+                <limitErrorMsg>Error troncal SIP</limitErrorMsg>at>
                 <value>$test_lt</value>
                 </result>
                 "
@@ -169,12 +169,12 @@ if [ "$peersiax" ]; then
                 <unit>TimeResponse</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
-                <limitmode>1</limitmode>
-                <limitmaxwarning>1000</limitmaxwarning>
-                <limitmaxerror>1999</limitmaxerror>
-                <limitminwarning>1</limitminwarning>
-                <limitminerror>1</limitminerror>
-                <limiterrormsg>Error troncal IAX</limiterrormsg>             
+                <limitMode>1</limitMode>
+                <limitMaxWarning>1000</limitMaxWarning>
+                <limitMaxError>1999</limitMaxError>
+                <limitMinWarning>1</limitMinWarning>
+                <limitMinError>1</limitMinError>
+                <limitErrorMsg>Error troncal IAX</limitErrorMsg>             
                 <value>$test_lt</value>
                 </result>
                 "
@@ -204,10 +204,10 @@ if [ "$registrationssip" ]; then
                 <channel>$p</channel>
                 <mode>Absolute</mode>
                 <float>1</float>
-                <limitmode>1</limitmode>
-                <limitminwarning>1</limitminwarning>
-                <limitminerror>1</limitminerror>
-                <limiterrormsg>Registro Troncal SIP</limiterrormsg>             
+                <limitMode>1</limitMode>
+                <limitMinWarning>1</limitMinWarning>
+                <limitMinError>1</limitMinError>
+                <limitErrorMsg>Registro Troncal SIP</limitErrorMsg>             
                 <value>$test_reg</value>
                 </result>
                 "
@@ -238,10 +238,10 @@ if [ "$registrationsiax" ]; then
                 <channel>$p</channel>
                 <mode>Absolute</mode>
                 <float>1</float>
-                <limitmode>1</limitmode>
-                <limitminwarning>1</limitminwarning>
-                <limitminerror>1</limitminerror>
-                <limiterrormsg>Registro Troncal SIP</limiterrormsg>  
+                <limitMode>1</limitMode>
+                <limitMinWarning>1</limitMinWarning>
+                <limitMinError>1</limitMinError>
+                <limitErrorMsg>Registro Troncal SIP</limitErrorMsg>  
                 <value>$test_reg</value>
                 </result>
                 "
@@ -314,10 +314,10 @@ echo '
         <unit>Percent</unit>
         <mode>Absolute</mode>
         <float>1</float>
-        <limitmode>1</limitmode>
-        <limitmaxwarning>75</limitmaxwarning>
-        <limitmaxerror>85</limitmaxerror>
-        <limiterrormsg>Disco Raiz</limiterrormsg> 
+        <limitMode>1</limitMode>
+        <limitMaxWarning>75</limitMaxWarning>
+        <limitMaxError>85</limitMaxError>
+        <limitErrorMsg>Disco Raiz</limitErrorMsg> 
        <value>'$raiz'</value>
    </result>
    <result>
@@ -325,10 +325,10 @@ echo '
         <unit>Percent</unit>
         <mode>Absolute</mode>
         <float>1</float>
-        <limitmode>1</limitmode>
-        <limitmaxwarning>75</limitmaxwarning>
-        <limitmaxerror>85</limitmaxerror>
-        <limiterrormsg>Disco var</limiterrormsg>
+        <limitMode>1</limitMode>
+        <limitMaxWarning>75</limitMaxWarning>
+        <limitMaxError>85</limitMaxError>
+        <limitErrorMsg>Disco var</limitErrorMsg>
         <value>'$var'</value>
    </result>
    <result>
@@ -336,10 +336,10 @@ echo '
         <unit>Percent</unit>
         <mode>Absolute</mode>
         <float>1</float>
-        <limitmode>1</limitmode>
-        <limitmaxwarning>80</limitmaxwarning>
-        <limitmaxerror>90</limitmaxerror>
-        <limiterrormsg>RAM</limiterrormsg>
+        <limitMode>1</limitMode>
+        <limitMaxWarning>80</limitMaxWarning>
+        <limitMaxError>90</limitMaxError>
+        <limitErrorMsg>RAM</limitErrorMsg>
         <value>'$ram'</value>
    </result>
    <result>
@@ -347,10 +347,10 @@ echo '
         <unit>Percent</unit>
         <mode>Absolute</mode>
         <float>1</float>
-        <limitmode>1</limitmode>
-        <limitmaxwarning>20</limitmaxwarning>
-        <limitmaxerror>30</limitmaxerror>
-        <limiterrormsg>Swap</limiterrormsg>
+        <limitMode>1</limitMode>
+        <limitMaxWarning>20</limitMaxWarning>
+        <limitMaxError>30</limitMaxError>
+        <limitErrorMsg>Swap</limitErrorMsg>
         <value>'$swap'</value>
    </result>
 
@@ -359,10 +359,10 @@ echo '
         <unit>Percent</unit>
         <mode>Absolute</mode>
         <float>1</float>
-        <limitmode>1</limitmode>
-        <limitmaxwarning>50</limitmaxwarning>
-        <limitmaxerror>80</limitmaxerror>
-        <limiterrormsg>Disco Raiz</limiterrormsg>
+        <limitMode>1</limitMode>
+        <limitMaxWarning>50</limitMaxWarning>
+        <limitMaxError>80</limitMaxError>
+        <limitErrorMsg>Disco Raiz</limitErrorMsg>
         <value>'$cpu'</value>
    </result>
 
