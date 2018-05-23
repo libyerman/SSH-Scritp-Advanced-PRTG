@@ -206,8 +206,10 @@ if [ "$registrationssip" ]; then
                 <mode>Absolute</mode>
                 <float>1</float>
                 <limitMode>1</limitMode>
-                <limitMinWarning>1</limitMinWarning>
-                <limitMinError>1</limitMinError>
+                <limitMinWarning>0,9</limitMinWarning>
+		<limitMaxWarning>1,1</limitMaxWarning>
+                <limitMaxError>1,1</limitMaxError>
+                <limitMinError>0,9</limitMinError>
                 <limitErrorMsg>Registro Troncal SIP</limitErrorMsg>             
                 <value>$test_reg</value>
                 </result>
@@ -240,9 +242,10 @@ if [ "$registrationsiax" ]; then
 		<unit>Registro</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
-                <limitMode>1</limitMode>
-                <limitMinWarning>1</limitMinWarning>
-                <limitMinError>1</limitMinError>
+                <limitMinWarning>0,9</limitMinWarning>
+		<limitMaxWarning>1,1</limitMaxWarning>
+                <limitMaxError>1,1</limitMaxError>
+                <limitMinError>0,9</limitMinError>
                 <limitErrorMsg>Registro Troncal SIP</limitErrorMsg>  
                 <value>$test_reg</value>
                 </result>
