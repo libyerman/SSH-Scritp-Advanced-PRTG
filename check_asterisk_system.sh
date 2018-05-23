@@ -152,7 +152,7 @@ fi
 if [ "$peersiax" ]; then
         for p in $peersiax
         do
-                command_output=`sudo $ASTERISK -rx "iax show peer $p" 2>&1`
+                command_output=`sudo $ASTERISK -rx "iax2 show peer $p" 2>&1`
 
                 latencia=`echo "$command_output" | grep "^[[:space:]]*Status[[:space:]]*:" | awk '{print $4;}' | awk '{print $1;}' |sed -e 's/^(//' -e 's/;$//'`
 
@@ -202,6 +202,7 @@ if [ "$registrationssip" ]; then
                 xml_troncales=" $xml_troncales 
                 <result>
                 <channel>$p</channel>
+		<unit>Registro</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
                 <limitMode>1</limitMode>
@@ -222,7 +223,7 @@ if [ "$registrationsiax" ]; then
         
         for p in $registrationsiax
         do
-                command_output=`sudo $ASTERISK -rx "iax show registry $p" 2>&1`
+                command_output=`sudo $ASTERISK -rx "iax2 show registry $p" 2>&1`
 
                 registro=`echo "$command_output" |grep $p | awk '{print $5;}'`
 
@@ -236,6 +237,7 @@ if [ "$registrationsiax" ]; then
                 xml_troncales=" $xml_troncales 
                 <result>
                 <channel>$p</channel>
+		<unit>Registro</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
                 <limitMode>1</limitMode>
