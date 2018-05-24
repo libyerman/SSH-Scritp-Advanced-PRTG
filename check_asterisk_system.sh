@@ -131,7 +131,7 @@ if [ "$peerssip" ]; then
 
                 xml_troncales=" $xml_troncales 
                 <result>
-                <channel>$p</channel>
+                <channel>SIP PEER $p</channel>
                 <unit>TimeResponse</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
@@ -140,7 +140,7 @@ if [ "$peerssip" ]; then
                 <limitMaxError>1999</limitMaxError>
                 <limitMinWarning>1</limitMinWarning>
                 <limitMinError>1</limitMinError>
-                <limitErrorMsg>Error troncal SIP</limitErrorMsg>at>
+                <limitErrorMsg>Error troncal SIP</limitErrorMsg>
                 <value>$test_lt</value>
                 </result>
                 "
@@ -165,7 +165,7 @@ if [ "$peersiax" ]; then
 
                 xml_troncales=" $xml_troncales 
                 <result>
-                <channel>$p</channel>
+                <channel>IAX2 PEER $p</channel>
                 <unit>TimeResponse</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
@@ -201,15 +201,15 @@ if [ "$registrationssip" ]; then
 
                 xml_troncales=" $xml_troncales 
                 <result>
-                <channel>$p</channel>
+                <channel>SIP REG $p</channel>
 		<unit>Registro</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
                 <limitMode>1</limitMode>
-                <limitMinWarning>0,9</limitMinWarning>
-		<limitMaxWarning>1,1</limitMaxWarning>
-                <limitMaxError>1,1</limitMaxError>
-                <limitMinError>0,9</limitMinError>
+                <limitMinWarning>1</limitMinWarning>
+		<limitMaxWarning>3</limitMaxWarning>
+                <limitMaxError>3</limitMaxError>
+                <limitMinError>1</limitMinError>
                 <limitErrorMsg>Registro Troncal SIP</limitErrorMsg>             
                 <value>$test_reg</value>
                 </result>
@@ -238,14 +238,14 @@ if [ "$registrationsiax" ]; then
 
                 xml_troncales=" $xml_troncales 
                 <result>
-                <channel>$p</channel>
+                <channel>IAX2 REG $p</channel>
 		<unit>Registro</unit>
                 <mode>Absolute</mode>
                 <float>1</float>
-                <limitMinWarning>0,9</limitMinWarning>
-		<limitMaxWarning>1,1</limitMaxWarning>
-                <limitMaxError>1,1</limitMaxError>
-                <limitMinError>0,9</limitMinError>
+                <limitMinWarning>1</limitMinWarning>
+		<limitMaxWarning>3</limitMaxWarning>
+                <limitMaxError>3</limitMaxError>
+                <limitMinError>1</limitMinError>
                 <limitErrorMsg>Registro Troncal SIP</limitErrorMsg>  
                 <value>$test_reg</value>
                 </result>
